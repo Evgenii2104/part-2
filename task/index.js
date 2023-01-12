@@ -4,9 +4,9 @@ const timerVal = document.getElementById('timer');
 
 
 function initTimer() {
-   let seconds = 30;
+   let seconds = 4;
    const timer = setInterval(() => {
-     if(seconds < 1) {
+     if(seconds < 0) {
        timerVal.style.display = 'none';
        let massag = prompt('Вы победили в конкурсе', '');
        alert(massag);
