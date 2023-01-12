@@ -4,7 +4,7 @@ const timerVal = document.getElementById('timer');
 
 
 function initTimer() {
-   let seconds = 4;
+   let seconds = 30;
    const timer = setInterval(() => {
      if(seconds < 0) {
        timerVal.style.display = 'none';
