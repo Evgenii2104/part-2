@@ -10,8 +10,7 @@ let res = holes.forEach((hole) => {
 
 let kill = 0;
 let miss = 0;
-//console.log(document.getElementById("dead").innerHTML = 2)
-//console.log(res)
+
 function checClick() {
 
       if (event.target.classList.contains('hole_has-mole')) {
@@ -30,7 +29,3 @@ function checClick() {
     }
 }
 
-//console.log(checClick())
-//for (let name of hole)
-
-//console.log(hole.classList.contains( 'hole_has-mole' ))*/
