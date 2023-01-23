@@ -1,26 +1,42 @@
 
 function useCounter() {
-    let count = 0;
+    let countr = 0;
  
     return function() {
-        count++;
-        return document.getElementById("clik").innerHTML = `Количество кликов ${count}`
+        countr++;
+        if (countr % 2 !== 0) {
+          document.getElementById("image").style.width = "120px"
+          } else {
+            document.getElementById("image").style.width = "100px"
+          }
+        return document.getElementById("click_count").innerHTML = `Количество кликов: ${countr}`;
     }; 
 }
  
 let counter = useCounter();
+
+
  
 function count() {
-  alert(counter());
+  counter();
+  /*let time = 0;
+  let sec = 0;
+  let timer = setInterval(() => {
+    time++;
+    sec = Math.floor(time / 100)
+    document.getElementById("click_speed").innerHTML = `Скорость клика: ${sec}`
+
+  },)*/
+  
 }
 
-function mouseDown() {
+/*function mouseDown() {
     document.getElementById("image").style.width = "120px";
   }
   
   function mouseUp() {
     document.getElementById("image").style.width = "100px";
-  }
+  }*/
 
 
 // Доработки:
