@@ -1,20 +1,26 @@
 let mod = document.getElementById('modal_main');
-let modal = document.getElementsByClassName('modal__close')[1]
-//let modle = document.getElementsByClassName('btn btn_danger modal__close show-success')
-//let mo = Array.from(modle)[0]
-//console.log(mo)
+let mood = document.getElementById('modal_success')
+let modal = document.getElementsByClassName('modal__close')[0]
+
+console.log(modal)
+
+
 setTimeout(() => {
     mod.classList.add('modal_active');
 },1000);
 
-
-mod.onclick = () => {
+modal.onclick = () => {
+    mod.remove(mood)
+    mod.add(mood)
+}
+/*mod.onclick = () => {
     modal.classList.remove('btn_danger', 'modal__close', 'show-success')
     modal.classList.add('btn_success')
     check()
     
-}
-//console.log(modle)
+}*/
+
+
 let cout = 1;
 function check() {
     cout++
