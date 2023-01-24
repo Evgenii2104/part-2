@@ -1,6 +1,6 @@
 
 let holes = Array.from(document.getElementsByClassName('hole'));
-let res = holes.forEach((hole) => {
+ holes.forEach((hole) => {
     hole.onclick = (event) => {
         console.log(event.target.classList.contains('hole_has-mole'))
         checClick()
@@ -16,14 +16,16 @@ function checClick() {
         kill++
          document.getElementById('dead').innerHTML = kill;
         if (kill > 9) {
-            alert ('you win')
+            alert ('you win');
+            document.location.reload()
         }
          
     } else {
         miss++
         document.getElementById('lost').innerHTML = miss;
         if (miss > 4) {
-            alert ('you loser')
+            alert ('you loser');
+            document.location.reload()
         }
     }
 }
