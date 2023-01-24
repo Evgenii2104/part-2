@@ -1,42 +1,39 @@
 
+//let start = new Date().getTime()
+//console.log(start)
+
+
 function useCounter() {
     let countr = 0;
+    let start = new Date().getSeconds()
  
     return function() {
+      
         countr++;
         if (countr % 2 !== 0) {
-          document.getElementById("image").style.width = "120px"
+          document.getElementById("image").style.width = "120px";
+          
           } else {
-            document.getElementById("image").style.width = "100px"
+            document.getElementById("image").style.width = "100px";
+            
           }
-        return document.getElementById("click_count").innerHTML = `Количество кликов: ${countr}`;
+          
+          let end = new Date().getSeconds()
+          let speed = countr / (end - start) 
+          console.log(start, end) ;
+          
+        return (document.getElementById("click_speed").innerHTML = `Скорость клика: ${speed}`,
+         document.getElementById("click_count").innerHTML = `Количество кликов: ${countr}`);
     }; 
 }
- 
+
 let counter = useCounter();
-
-
  
 function count() {
   counter();
-  /*let time = 0;
-  let sec = 0;
-  let timer = setInterval(() => {
-    time++;
-    sec = Math.floor(time / 100)
-    document.getElementById("click_speed").innerHTML = `Скорость клика: ${sec}`
-
-  },)*/
-  
 }
 
-/*function mouseDown() {
-    document.getElementById("image").style.width = "120px";
-  }
-  
-  function mouseUp() {
-    document.getElementById("image").style.width = "100px";
-  }*/
+
 
 
 // Доработки:
