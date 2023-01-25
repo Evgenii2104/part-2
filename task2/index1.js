@@ -1,11 +1,11 @@
 
 //let start = new Date().getTime()
 //console.log(start)
-
+let start;
 
 function useCounter() {
     let countr = 0;
-    let start = new Date().getSeconds()
+    
  
     return function() {
       
@@ -18,11 +18,13 @@ function useCounter() {
             
           }
           
-          let end = new Date().getSeconds()
-          let speed = countr / (end - start) 
-          console.log(start, end) ;
+          let end = Date.now()
+          let speed =  end - start;
+          let fast = (1 / speed) * 1000;
+          console.log(start, end);
+          start = end;
           
-        return (document.getElementById("click_speed").innerHTML = `Скорость клика: ${speed}`,
+        return (document.getElementById("click_speed").innerHTML = `Скорость клика: ${fast}`,
          document.getElementById("click_count").innerHTML = `Количество кликов: ${countr}`);
     }; 
 }
@@ -31,6 +33,7 @@ let counter = useCounter();
  
 function count() {
   counter();
+  
 }
 
 
