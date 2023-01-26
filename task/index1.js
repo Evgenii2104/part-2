@@ -1,34 +1,34 @@
-let mod = document.getElementById('modal_main');
-let mood = document.getElementById('modal_success')
-let modal = document.getElementsByClassName('modal__close')[0]
 
-console.log(modal)
+let modalMain = document.getElementById('modal_main');
+let modalSuccess = document.getElementById('modal_success')
+//let modal = document.getElementsByClassName('modal__close')[0];
+let button = document.getElementsByClassName('show-success')[0]
+//let button1 = document.getElementsByClassName('btn btn_success')
+
+let modalMainClose = modalMain.querySelector('.modal__close')
+let modalSuccessClose = modalSuccess.querySelector('.modal__close')
+
+console.log(modalMainClose, modalSuccessClose)
 
 
 setTimeout(() => {
-    mod.classList.add('modal_active');
+    modalMain.classList.add('modal_active');
 },1000);
 
-modal.onclick = () => {
-    mod.remove(mood)
-    mod.add(mood)
+modalMainClose.onclick = () => {
+    modalMain.classList.remove('modal_active');
 }
-/*mod.onclick = () => {
-    modal.classList.remove('btn_danger', 'modal__close', 'show-success')
-    modal.classList.add('btn_success')
-    check()
-    
-}*/
 
-
-let cout = 1;
-function check() {
-    cout++
-    if (cout > 2) {
-        mod.classList.remove('modal_active')
-    }
-
+button.onclick = () => {
+    modalMain.classList.remove('modal_active');
+    modalSuccess.classList.add('modal_active'); 
 }
+
+modalSuccessClose.onclick = () => {
+    modalSuccess.classList.remove('modal_active');
+}
+
+
 
 // Работает не так, как описано в задании
 
