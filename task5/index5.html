@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .item {
+    width: 120px;
+    height: 120px;
+    background: lightgray;
+    margin: 20px;
+  }
+
+  .circles .item {
+    border-radius: 50%;
+  }
+
+  .rhombuses .item {
+    transform: rotate(45deg);
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+  }
+
+  .green-button {
+    padding: 12px 18px;
+    color: white;
+    background: cadetblue;
+    font-weight: bold;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    transition: all 1s ease-out;
+  }
+
+  .green-button:hover {
+    background: darkcyan;
+  }
+</style>
+<body>
+<div class="container circles">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+<div class="container squares">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+<div class="container rhombuses">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+<div class="container">
+  <button class="green-button">Create rhombus</button>
+</div>
+<script src="index5.js">
+  // 1. При наведении на первый круг ширина всех остальных кругов должна должна увеличиваться на 20%,
+  //    а когда убираем мышку с первого круга – ширина остальных должна возвращаться к исходному значению
+  // 2. При нажатии на первый квадрат цвет первого круга меняется на красный, при нажатии на второй
+  //    квадрат цвет второго круга меняется на красный и т.д.
+  // 3. При нажании на кнопку "Create rhombus" создать новый ромбик и добавить его в контейнер с ромбиками.
+  //    Максимум можно создать 6 ромбиков. После создания 6 ромбиков ничего не делать при нажании на кнопку
+</script>
+</body>
+</html>
