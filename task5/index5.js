@@ -23,26 +23,34 @@ console.log(keyCubs)
 
 cubs.forEach((cub, index) => { 
     cub.onclick = (e) => {
-        let clickBy = e.target = index
-        console.log(clickBy)
-       /* circs.forEach((cir, index) => {
-            index = clickBy;
-// найти по индексу, файнд индекс
-            cir.style.backgroundColor = 'red'
-            console.log(index)
-        })*/
+        let clickBy = e.target = index;
+        //console.log(clickBy)
+        //console.log(circs[clickBy])
+        circs[clickBy].style.backgroundColor = 'red';        
     }
 })
 
 
 
-//console.log(cubs.findIndex())
-/*function clic() {
-    cubs.onclick = () => {
-    }
+let button = Array.from(document.getElementsByClassName('green-button'))
+let rhombs = Array.from(document.querySelectorAll('.rhombuses .item'))
+let rhomb = document.querySelector('.rhombuses .item')
+let rh = document.querySelectorAll('.body > .container rhombuses')
+
+console.log(button, rhombs, rhomb, rh)
+
+//let x = rhomb.cloneNode(true)
+let x = rhomb.cloneNode()
+//x.classList.add('item')
+rhombs.push(x)
+//rh.appendChild(x)
+console.log(x, rhombs, rhomb)
+
+button.onclick = () => {
+    //let newDiv = document.createElement('div')
+    //newDiv.classList.add('item')
+    let x = rhomb.cloneNode(true)
+    rh.appendChild(x)
+    console.log(x)
+    //rh.innerHTML = '<div class="item"></div>'
 }
-let ib = cubs.findIndex(clic)*/
-
-
-    
-//console.log(count)
