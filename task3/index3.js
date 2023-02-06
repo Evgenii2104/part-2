@@ -13,8 +13,8 @@ sliderPrev.onclick = () => {
         console.log(sliders.length)
         actSliders.forEach((actSlider) => {
             actSlider.classList.remove('slider__item_active')
-            slider[i + 1]
-            slider.classList.add('slider__item_active')
+            actSlider += slider[i + 1]
+            actSlider.classList.add('slider__item_active')
 
         })
         

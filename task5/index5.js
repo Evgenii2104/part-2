@@ -42,8 +42,9 @@ console.log(button, rhombs, rhomb, rh)
 //let x = rhomb.cloneNode(true)
 let x = rhomb.cloneNode()
 //x.classList.add('item')
-rhombs.push(x)
+//rhombs.push(x)
 //rh.appendChild(x)
+rh.innerHTML.appendChild(x) += '<div class="item"></div>'
 console.log(x, rhombs, rhomb)
 
 button.onclick = () => {
