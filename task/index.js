@@ -1,31 +1,26 @@
-/*const menuItems = Array.from(document.querySelectorAll('.menu_main > .menu__item'))
+let but = document.querySelector('.dropdown__value')
+let men = document.querySelector('.dropdown__list')
 
+console.log(but, men)
 
-menuItems.forEach((menuItem) => {
-    let link = menuItem.querySelector('a')
-    link.onclick = (event) => {
-        let menuSub = menuItem.querySelector('.menu_sub')
-        if (menuSub !== undefined) {
-            let menuActs = Array.from(document.querySelectorAll('.menu_sub.menu_active'))
-            console.log(menuActs)
-            if (menuActs.length > 0) {
-                menuActs.forEach((menuAct) => {
-                menuAct.classList.remove('menu_active')
-            })
-        } else {
-            menuSub.classList.add('menu_active')
-            event.preventDefault()
-        }
-        
-        }
+but.onclick = () => {
+    //let targget = event.targget
+   // let targget = this.value
+    console.log(but.textContent)
+    //but.textContent = targget.parentNode 
+    men.classList.toggle('dropdown__list_active')
+    men.onclick = (event) => {
+        //let targget = event.currentTargget
+        console.log(this.targget, targget)
+        but.textContent = men.event.textContent
+
     }
-})*/
 
-/*let button = Array.from(document.getElementsByClassName('dropdown__value'))
-console.log(button)
-button.addEventListener('clic', function() {
-    console.log(this.dropdown__list)
-})
-*/
+}
 
-
+/*let c = document.querySelectorAll('.dropdown__list')
+c.addEventListener('change', function(){  
+    var getValue = this.value;
+    // this в этом контексте - элемент, который запустил фукнцию. То же, что и select.value;
+    console.log( getValue );
+  });*/
