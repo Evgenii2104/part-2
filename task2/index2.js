@@ -4,17 +4,16 @@ let loss = document.querySelector('.status__loss')
 console.log(win, loss)
 
 let strs = Array.from(document.querySelectorAll('.word > .symbol'))
-//let strTexts = strs.textContent
+
 console.log(strs)
+
 let count = 0
 let countWin = 0
-    let countLoss = 0
+let countLoss = 0
+
 function curretTru (event) {
     
-    
-    //console.log(event)
-    //console.log(event instanceof KeyboardEvent)
-    console.log(event.key) //
+    console.log(event.key) 
 
     if (count < strs.length) {
             let str = strs[count]
