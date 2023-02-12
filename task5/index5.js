@@ -2,7 +2,7 @@ let circ = document.querySelectorAll('.circles .item')[0]
 let circs = Array.from(document.querySelectorAll('.circles .item'))
 let circsNotFirsts = circs.slice(1)
 
-console.log(circs)
+//console.log(circs)
 
 circ.onmouseover = () => {
     circsNotFirsts.forEach((circsNotFirst) => {
@@ -19,7 +19,7 @@ circ.onmouseout = () => {
 
 let cubs = Array.from(document.querySelectorAll('.squares .item'))
 keyCubs = Object.keys(cubs)
-console.log(keyCubs)
+//console.log(keyCubs)
 
 cubs.forEach((cub, index) => { 
     cub.onclick = (e) => {
@@ -32,26 +32,28 @@ cubs.forEach((cub, index) => {
 
 
 
-let button = Array.from(document.getElementsByClassName('green-button'))
-let rhombs = Array.from(document.querySelectorAll('.rhombuses .item'))
-let rhomb = document.querySelector('.rhombuses .item')
-let rh = document.querySelectorAll('.body > .container rhombuses')
+let button = Array.from(document.querySelectorAll('.green-button'))
+//let rhombs = Array.from(document.querySelectorAll('.rhombuses .item'))
+let rhomb = Array.from(document.querySelectorAll('.rhombuses > .item'))[0]
+let rh = Array.from(document.querySelectorAll('.container.rhombuses'))
 
-console.log(button, rhombs, rhomb, rh)
+console.log(button, rhomb, rh)
 
 //let x = rhomb.cloneNode(true)
-let x = rhomb.cloneNode()
+//let x = rhomb.cloneNode()
 //x.classList.add('item')
 //rhombs.push(x)
 //rh.appendChild(x)
-rh.innerHTML.appendChild(x) += '<div class="item"></div>'
-console.log(x, rhombs, rhomb)
+//rh.innerHTML.appendChild(x) += '<div class="item"></div>'
+//console.log(x, rhombs, rhomb)
 
 button.onclick = () => {
-    //let newDiv = document.createElement('div')
-    //newDiv.classList.add('item')
+    /*let newDiv = document.createElement('div')
+    newDiv.classList.add('item')
+    rh.appendCild(newDiv)*/
     let x = rhomb.cloneNode(true)
+    console.log(x)
     rh.appendChild(x)
     console.log(x)
-    //rh.innerHTML = '<div class="item"></div>'
+    
 }
