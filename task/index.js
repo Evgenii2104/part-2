@@ -1,20 +1,26 @@
-//https://webgolovolomki.com/poyavlenie-elementov-pri-skrolle/
-//http://wordsmall.ru/jquery-javascript/animaciya-elementov-pri-prokrutke-stranicy-js-plaginy.html
-//https://learn.javascript.ru/js-animation
 
-function onEntry(entry) {
-    entry.forEach(change => {
-      if (change.isIntersecting) {
-       change.target.classList.add('element-show');
-      }
-    });
-  }
+
+  let shows = Array.from(document.querySelectorAll('.reveal'))
   
-  let options = {
-    threshold: [0.5] };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.element-animation');
-  
-  for (let elm of elements) {
-    observer.observe(elm);
+
+  console.log(shows)
+
+
+  document.addEventListener("scroll", myFunction)
+
+  function myFunction() {
+    let viewHeight = window.innerHeight
+    console.log(viewHeight)
+    
+    shows.forEach((show) => {
+      let showsTop = show.getBoundingClientRect().top
+      console.log(showsTop)
+    if (showsTop < viewHeight) {
+        show.classList.add('reveal_active')   
+    } else {
+      show.classList.remove('reveal_active')
+    }
+  });
   }
+
+  
