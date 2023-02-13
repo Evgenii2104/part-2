@@ -33,20 +33,19 @@ cubs.forEach((cub, index) => {
 
 
 let button = document.querySelector('.green-button')
-//let rhombs = Array.from(document.querySelectorAll('.rhombuses .item'))
-let rhomb = Array.from(document.querySelectorAll('.rhombuses > .item'))[0]
+
+let rhomb = document.querySelector('.rhombuses > .item')
 let rh = document.querySelector('.container.rhombuses')
 
 console.log(rh)
 
 
 button.onclick = () => {
-    /*let newDiv = document.createElement('div')
-    newDiv.classList.add('item')
-    rh.appendCild(newDiv)*/
+    let rhombs = Array.from(document.querySelectorAll('.rhombuses > .item'))
+    if (rhombs.length < 6) {
     let x = rhomb.cloneNode(true)
-    console.log(x)
+    console.log(rhombs.length)
     rh.appendChild(x)
     console.log(x)
-    
+    }
 }
