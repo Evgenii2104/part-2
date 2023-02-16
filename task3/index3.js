@@ -18,18 +18,29 @@ for(let i = 0; i < size.length; i++) {
 }*/
 
 
-    
-    size.forEach((siz) => {
+
+    size.forEach((siz, event) => {
+        let target = event
+        console.log(target)
+        
         siz.onclick = () => {
-            //let act = document.querySelector('.font-size_active')
-            //act.classList.remove('font-size_active')
-            //console.log(act)
-            
+            let act = document.querySelector('.font-size_active')
+            act.classList.remove('font-size_active')
             siz.classList.add('font-size_active')
-            content.classList.add()
+
+            if (target == 0) {
+                content.classList.toggle('book_fs-small')
+            } if (target == 2) {
+                content.classList.toggle('book_fs-big')
+            }
         }
     })
 
+
+    /*function foo(event) {
+        let target = event.target
+        console.log(target)
+    }*/
         
         
    
