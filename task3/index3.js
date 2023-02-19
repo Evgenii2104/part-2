@@ -7,8 +7,8 @@ console.log(sliderPrev, sliderNext)
 console.log(sliders.length)
 
 let count = 1
-//document.addEventListener('click', showNext)
-document.addEventListener('click', showPrev)
+document.addEventListener('click', showNext)
+//document.addEventListener('click', showPrev)
 
 
 
@@ -29,23 +29,26 @@ document.addEventListener('click', showPrev)
         }
     
     
-    function showPrev() {
+    /*function showPrev() {
         sliderPrev.onclick = () => {
-            if (count <= sliders.length) {
-                count = 6
-            }
+            
             let actSliders = document.querySelector('.slider__item_active')
             actSliders.classList.remove('slider__item_active')
             sliders[count].classList.add('slider__item_active')           
             console.log(sliders[count])
            }
+        
            count--
+           if (count <= -1) {
+            count = 5
+        } 
+
            console.log(count)
            
     }    
     
  
-console.log(count)
+console.log(count)*/
 
 
 
