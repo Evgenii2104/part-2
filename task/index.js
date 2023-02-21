@@ -5,7 +5,7 @@ console.log(tips)
 tips.forEach((tip) => {
     tip.onclick = (event) => {
         event.preventDefault() 
-        if(!document.querySelectorAll('.tooltip_active')) {
+        if(document.querySelector('.tooltip_active')) {
             console.log(document.querySelector('.tooltip_active'))
            document.querySelector('.tooltip_active').remove('tooltip_active')
         } else {
@@ -16,7 +16,7 @@ tips.forEach((tip) => {
         act.classList.add('tooltip_active')
         
         tip.appendChild(act)
-       console.log(tip.title)
+       //console.log(tip.title)
         }
         
     }
