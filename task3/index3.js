@@ -11,10 +11,10 @@ function submitForm(e) {
 const form = new FormData(document.form); 
 const xhr = new XMLHttpRequest()
 xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/auth')
-xhr.setRequestHeader('Content-type', 'application/json')
+xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
 xhr.send(form)
 
-console.log(xhr.status)
+console.log(xhr.responseText)
 xhr.onreadystatechange = function() {
     if(xhr.readyState === 4) {
         let tex = xhr.responseText
