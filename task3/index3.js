@@ -8,10 +8,10 @@ console.log(formId)
 
 function submitForm(e) {
     e.preventDefault();
-const form = new FormData(document.form); 
+const form = new FormData(formTex); 
 const xhr = new XMLHttpRequest()
 xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/auth')
-xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')  //application/json; charset=utf-8
 xhr.send(form)
 
 console.log(xhr.responseText)
@@ -26,4 +26,4 @@ xhr.onreadystatechange = function() {
 }
 }
 
-btnSign.addEventListener('formTex', submitForm);
+btnSign.addEventListener('click', submitForm);
